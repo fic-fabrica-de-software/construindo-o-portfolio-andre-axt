@@ -1,0 +1,15 @@
+body{
+    background-color: #C96F3E;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.xicara {
+    transform: scale(1.5);
+    image-rendering: crisp-edges;
+}
