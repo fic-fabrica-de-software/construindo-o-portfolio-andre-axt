@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Preenche a altura da janela */
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(50, 12, 88), rgb(12, 11, 11));
+}
+
+.line {
+    position: relative;
+    width: 23ch; /* Largura fixa com base na frase mais longa */
+    margin: auto;
+    font-size: 180%;
+    text-align: left; /* Alinha à esquerda */
+    white-space: nowrap;
+    overflow: hidden;
+    color: antiquewhite;
+}
+
+.anim-typewriter {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* Cursor */
+    animation: typewriter 4s steps(var(--characters)) infinite, blinkTextCursor 500ms steps(12) infinite normal;
+}
+
+@keyframes typewriter {
+    0% { width: 0; }
+    40% { width: 100%; } /* A largura será ajustada dinamicamente */
+    60% { width: 100%; }
+    100% { width: 0; }
+}
+
+@keyframes blinkTextCursor {
+    from { border-right-color: rgba(255, 255, 255, 0.75); }
+    to { border-right-color: transparent; }
+}
