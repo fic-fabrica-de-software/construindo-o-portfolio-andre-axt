@@ -1,18 +1,24 @@
 body {
+    height: 100vh; 
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(50, 12, 88), rgb(12, 11, 11));
+}
+
+.index {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Preenche a altura da janela */
+    height: 100vh; 
     margin: 0;
     background-image: linear-gradient(to bottom right, rgb(50, 12, 88), rgb(12, 11, 11));
 }
 
 .line {
     position: relative;
-    width: 23ch; /* Largura fixa com base na frase mais longa */
+    width: 23ch; 
     margin: auto;
     font-size: 180%;
-    text-align: left; /* Alinha à esquerda */
+    text-align: left; 
     white-space: nowrap;
     overflow: hidden;
     color: antiquewhite;
@@ -22,13 +28,13 @@ body {
     display: inline-block;
     width: 0;
     overflow: hidden;
-    border-right: 2px solid rgba(255, 255, 255, 0.75); /* Cursor */
+    border-right: 2px solid rgba(255, 255, 255, 0.75); 
     animation: typewriter 4s steps(var(--characters)) infinite, blinkTextCursor 500ms steps(12) infinite normal;
 }
 
 @keyframes typewriter {
     0% { width: 0; }
-    40% { width: 100%; } /* A largura será ajustada dinamicamente */
+    40% { width: 100%; } 
     60% { width: 100%; }
     100% { width: 0; }
 }

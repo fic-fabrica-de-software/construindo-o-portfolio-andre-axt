@@ -1,3 +1,4 @@
+
 const frases = ["André Axt Bächtold", "sdhsajdhsajsakdsadsa", "sjdksadjsakjdsak"];
 let frasesIndex = 0;
 
@@ -12,4 +13,20 @@ function updatePhrase() {
 }
 
 setInterval(updatePhrase, 4000);
-updatePhrase();
+
+
+window.addEventListener("DOMContentLoaded", function() {
+
+    if (window.location.pathname.endsWith("/index.html") || window.location.pathname === "/") {
+        document.body.addEventListener("click", function() {
+
+            gsap.to("body", {
+                opacity: 0,
+                duration: 1,
+                onComplete: function() {
+                    window.location.href = "./public/inicio.html";
+                }
+            })
+        });
+    }
+});
